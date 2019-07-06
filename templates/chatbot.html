@@ -1,0 +1,35 @@
+<html>
+<head>
+  <script type="text/javascript">
+    var count_message = 0;
+    function get_dialog(msg, data){
+      var message = msg;
+      if (count_message == 0){
+        message = '7';
+      }
+      var request = new XMLHttpRequest();
+      request.open("GET", document.location.protocol + "/dialog/" + message);
+      request.send()
+      request.onload = function(){
+        tor = JSON.parse(request.responseText);
+        if (data != undefined){
+          document.getElementsByClassName('messages')[0].innerHTML += '<div class="messages2">' + data + '</div>';
+        }
+        document.getElementsByClassName('messages')[0].innerHTML += '<div class="message">' + tor['bot'].dialog + '</div>';
+        document.getElementsByClassName('buttons')[0].innerHTML = '';
+        for (var element in tor){
+          if (element != 'bot'){
+            document.getElementsByClassName('buttons')[0].innerHTML += '<button class="button" onclick="get_dialog('+ "'" +tor[element].id + "'" + ', ' + "'" + tor[element].dialog + "'" + ')">' + tor[element].dialog + '</button>';
+          }
+        }
+        count_message++;
+      };
+    }
+    get_dialog()
+  </script>
+</head>
+<body>
+  <div class="messages"></div>
+  <div class="buttons"></div>
+</body>
+</html>

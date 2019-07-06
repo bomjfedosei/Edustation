@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/funs.js"></script>
+    <title>Edustation</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand logo" href="#">&lt;Edustation&gt; </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item mr-2">
+                    <a class="nav-link" href="#">Поиск курса</a>
+                </li>
+                <li class="nav-item mr-2">
+                    <a class="nav-link" href="/chatbot">Edustation bot</a>
+                </li>
+
+                <li class="nav-item mr-2">
+                    <a class="nav-link" href="#">Разместить свой курс</a>
+                </li>
+
+                <li class="nav-item mr-2">
+                    <a class="nav-link" href="#">О нас</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="container-fluid mt-5 pt-5">
+            <div class="row">
+                <div class="container col-md-8 col-sm-12 ">
+
+                    <form class="form-row">
+                        <div class="form-row col-sm-8">
+                            <div class="col">
+                                <input type="text" oninput="poisk()" class="form-control" id="search" placeholder="Поиск курса">
+                                <p class="bot_link"><br>нужна помощь в подборе профессии? <a href="#">спросите нашего бота</a></p>
+                            </div>
+
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Поиск</button>
+                    </form>
+
+                    <div class="main_content">
+
+                        <!-- data output-->
+
+
+                    </div>
+
+                </div>
+
+                <div class="filters col-md-4 col-sm-12">
+                    <form>
+
+                        <div class="form-group">
+                            <label for="formControlRange">Стоимость курса</label>
+                            <input type="range" class="form-control-range" id="formControlRange">
+                        </div>
+
+                        <div class="form-check mt-5">
+                            <p>Формат обучения</p>
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Очно
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Дистанционно
+                            </label>
+                        </div>
+
+
+                        <div class="form-check mt-5">
+                            <p>Образовательное учреждение</p>
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Нетология
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Geekbrains
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Яндекс.Практикум
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Contented
+                            </label>
+                        </div>
+
+
+
+                        <div class="form-group mt-5">
+                            <label for="formControlRange">Аудиторская оценка</label>
+                            <input type="range" class="form-control-range" id="formControlRange">
+                        </div>
+
+                        <button type="submit" class="btn mb-2">Применить</button>
+
+                        <button type="submit" class=" btn btn-glass mb-2">Сбросить</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body></html>

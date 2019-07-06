@@ -1,0 +1,22 @@
+<html>
+<head>
+  <script>
+    function response(type) {
+      var request = new XMLHttpRequest();
+      var typetext = '';
+      if (type == 'all'){
+        typetext = "/dial";
+        request.onload = function() {
+          console.log(request);
+        }
+      }
+      request.open("GET", document.location.protocol + typetext);
+      request.send()
+    }
+    response('all');
+  </script>
+</head>
+<body>
+  <div class="objects"></div>
+</body>
+</html>
