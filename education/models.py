@@ -26,3 +26,10 @@ class Courses(models.Model):
 
 class Schools(models.Model):
     name = models.CharField(max_length = 100, verbose_name = "Название учреждения")
+
+class Chatbot_User(models.Model):
+    name = models.CharField(max_length = 50, verbose_name = "Имя пользователя")
+    age = models.IntegerField(verbose_name = "Возраст", default = None)
+    email = models.EmailField(verbose_name = 'Е-маил')
+    phone = models.IntegerField(verbose_name = 'Телефон пользователя')
+    serialkeys = models.UUIDField(verbose_name = "UUID")

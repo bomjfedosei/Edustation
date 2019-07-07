@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -10,14 +10,13 @@
 
 
     <link rel="stylesheet" href="/static/style.css">
-    <link rel="stylesheet" href="/static/messenger.css">
-    <script src="/static/chat.js"></script>
-    <title>Edustation Bot</title>
+    <title>Курс {{ title }}</title>
 </head>
 
 <body>
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <a class="navbar-brand logo" href="/">&lt;Edustation&gt; </a>
+      <a class="navbar-brand logo" href="#">&lt;Edustation&gt; </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,44 +29,58 @@
               <li class="nav-item mr-2">
                   <a class="nav-link" href="/chatbot">Edustation bot</a>
               </li>
+
               <!-- <li class="nav-item mr-2">
                   <a class="nav-link" href="#">Разместить свой курс</a>
               </li> -->
+              
           </ul>
       </div>
   </nav>
 
-    <div class="container edustation_bot mt-5 pt-5">
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <h1>Edustation bot</h1>
-                <img src="static/bot_0.svg" alt="">
+
+    <main>
+
+        <div class="container mt-5 pt-5 cart_detail">
+            <h1>
+                {{title}}
+            </h1>
+
+            <div class="cart_info_detail">
+                <ul>
+                    <li class="cart_teacher">{{school}}</li>
+                    <li class="cart_time">{{duration}} месяцев</li>
+                    <li>{{type}}</li>
+                    <li>{{price}} руб</li>
+                </ul>
             </div>
 
-            <div class="col-md-8 col-sm-12">
-                <div class="container">
-                    <div class="messaging">
-                        <div class="inbox_msg">
-                            <div class="mesgs">
-                                <div class="msg_history">
 
-                                </div>
-                                <div class="type_msg">
-                                    <div class="input_msg_write">
-                                        <input type="text" class="write_msg" id = "writer" placeholder="Введите ваше сообщение" />
-                                        <button class="msg_send_btn" id = "sender" type="button"> Отправить</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <button type="submit" class="btn btn-reg mb-2">Записаться на обучение</button>
+            <div class="datail_statistics mt-4">
 
-                        <div class="variable">
+                <div class="row">
+                    <div class="col-6">
+                        <h3>{{rate_auditors}} / 10</h3>
+                        <p>Оценка курса от аудитора</p>
+                    </div>
 
-                        </div>
+                    <div class="col-6">
+                        <h3>{{rate_students}} / 10</h3>
+                        <p>Оценка курса студентами</p>
                     </div>
                 </div>
+
             </div>
+            <div class="detail_content">
+                <p>
+                    {{description}}
+            </div>
+
         </div>
 
-    </div>
+
+
+
+    </main>
 </body></html>

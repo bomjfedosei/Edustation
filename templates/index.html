@@ -15,32 +15,26 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand logo" href="#">&lt;Edustation&gt; </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand logo" href="#">&lt;Edustation&gt; </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item mr-2">
-                    <a class="nav-link" href="#">Поиск курса</a>
-                </li>
-                <li class="nav-item mr-2">
-                    <a class="nav-link" href="/chatbot">Edustation bot</a>
-                </li>
-
-                <li class="nav-item mr-2">
-                    <a class="nav-link" href="#">Разместить свой курс</a>
-                </li>
-
-                <li class="nav-item mr-2">
-                    <a class="nav-link" href="#">О нас</a>
-                </li>
-
-            </ul>
-        </div>
-    </nav>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item mr-2">
+                  <a class="nav-link" href="/">Поиск курса</a>
+              </li>
+              <li class="nav-item mr-2">
+                  <a class="nav-link" href="/chatbot">Edustation bot</a>
+              </li>
+              <!-- <li class="nav-item mr-2">
+                  <a class="nav-link" href="#">Разместить свой курс</a>
+              </li> -->
+          </ul>
+      </div>
+  </nav>
     <main>
         <div class="container-fluid mt-5 pt-5">
             <div class="row">
@@ -49,7 +43,7 @@
                     <form class="form-row">
                         <div class="form-row col-sm-8">
                             <div class="col">
-                                <input type="text" oninput="poisk()" class="form-control" id="search" placeholder="Поиск курса">
+                                <input type="text" oninput="poisk(document.getElementById('search').value)" class="form-control" id="search" placeholder="Поиск курса">
                                 <p class="bot_link"><br>нужна помощь в подборе профессии? <a href="#">спросите нашего бота</a></p>
                             </div>
 

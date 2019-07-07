@@ -25,4 +25,8 @@ urlpatterns = [
     path('dial', views.get_all_dialogs),
     path('chatbot', views.chatbot),
     path('search/<str:searchstring>', views.search),
+    path('result', views.result),
+    path('card/<str:path>', views.card_detail),
+    path('form', views.form),
+    path('createuser', views.form_add_user),
 ]

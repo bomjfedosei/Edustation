@@ -6,7 +6,7 @@ from .models import BotDialog
 from .models import Connections
 from .models import Courses
 from .models import Schools
-
+from .models import Chatbot_User
 
 def QueryToDict(query):
     response = dict()
@@ -17,7 +17,18 @@ def QueryToDict(query):
 def index(request):
     return render(request, 'index.html')
 
+def form(request):
+    return render(request, 'form.html')
+
+def form_add_user(request):
+    name = request.GET;
+    print(name)
+    return JsonResponse({'status': '4'})
+
+
 def get_dialog(request, id):
+    # if (id == 7):
+    #    name = request.GET.get("back", "WHO?")
     dialog = Connections.objects.filter(firstfrase = id).values()
     response = dict()
     for i in range(len(dialog)):
@@ -32,7 +43,6 @@ def get_dialog(request, id):
             bot['id'] = bd[0]['id']
             bot['dialog'] = bd[0]['dialog']
             response[str(i)] = bot
-            print(response)
     return JsonResponse(response)
 
 def get_all_dialogs(request):
@@ -42,7 +52,7 @@ def add_dialog(request):
     return render(request, 'addD.html')
 
 def chatbot(request):
-    return render(request, 'chatbot.html')
+    return render(request, 'chat_bot.html')
 
 def search(request, searchstring):
     search = Courses.objects.filter(title__icontains=searchstring).values()
@@ -55,3 +65,13 @@ def search(request, searchstring):
         if (i == 2):
             break
     return JsonResponse(sear)
+
+def result(request):
+    return render(request, 'result.html')
+
+def card_detail(request, path):
+    search = Courses.objects.filter(page_title__icontains=path).values()
+    sear = search[0]
+    ids = sear['school']
+    sear['school'] = Schools.objects.filter(id = ids).values()[0]['name']
+    return render(request, 'cart_detail.html', context = sear)

@@ -1,5 +1,4 @@
-function poisk(){
-  ser = document.getElementById('search').value;
+function poisk(ser){
   var request = new XMLHttpRequest();
   request.open("GET", document.location.protocol + '/search/' + ser)
   request.send()

@@ -11,7 +11,9 @@ h1 {
 
     color: #000000;
 }
-
+nav{
+  box-shadow: 0 0 2px rgba(0,0,0,.35);
+}
 h2 {
     font-family: Roboto Mono;
     font-style: normal;
@@ -21,6 +23,14 @@ h2 {
     letter-spacing: -0.004em;
 
     color: #000000;
+}
+
+h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 140%;
 }
 
 p {
@@ -207,4 +217,45 @@ a:hover {
 .filters .btn-glass {
     background: #fff;
     color: #000;
+}
+
+
+/*Cart Detail styles*/
+.cart_info_detail {
+    margin-top: 10px;
+}
+
+.cart_info_detail ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.cart_info_detail ul {
+    padding-inline-start: 0px;
+}
+
+.btn-reg {
+    width: 180px;
+}
+
+.cart_detail {
+    width: 760px;
+}
+
+.detail_content {
+    margin-top: 26px;
+
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 21%;
+
+    color: #888;
+}
+
+datail_statistics p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+
 }

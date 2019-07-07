@@ -7,15 +7,14 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="static/form.js"></script>
 
-
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel="stylesheet" href="/static/messenger.css">
-    <script src="/static/chat.js"></script>
-    <title>Edustation Bot</title>
+    <link rel="stylesheet" href="static/style.css">
+    <title>Edustation</title>
 </head>
 
 <body>
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <a class="navbar-brand logo" href="/">&lt;Edustation&gt; </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,38 +35,32 @@
           </ul>
       </div>
   </nav>
-
-    <div class="container edustation_bot mt-5 pt-5">
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <h1>Edustation bot</h1>
-                <img src="static/bot_0.svg" alt="">
-            </div>
-
-            <div class="col-md-8 col-sm-12">
-                <div class="container">
-                    <div class="messaging">
-                        <div class="inbox_msg">
-                            <div class="mesgs">
-                                <div class="msg_history">
-
-                                </div>
-                                <div class="type_msg">
-                                    <div class="input_msg_write">
-                                        <input type="text" class="write_msg" id = "writer" placeholder="Введите ваше сообщение" />
-                                        <button class="msg_send_btn" id = "sender" type="button"> Отправить</button>
-                                    </div>
-                                </div>
-                            </div>
+    <main>
+        <div class="container mt-5 pt-4">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h2>Заполните форму регистрации</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Ваше имя</label>
+                            <input type="text" class="form-control" id="name" placeholder="Имя">
                         </div>
 
-                        <div class="variable">
-
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Ваш Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ваш Email">
                         </div>
-                    </div>
+
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Ваш Номер</label>
+                            <input type="number" class="form-control" id="number" placeholder="Ваш Номер">
+                        </div>
+
+                        <button class="btn btn-reg mb-2" id = "reg">Зарегистрироваться</button>
+
+                    </form>
                 </div>
             </div>
         </div>
-
-    </div>
+    </main>
 </body></html>
