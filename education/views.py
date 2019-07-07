@@ -67,7 +67,11 @@ def search(request, searchstring):
     return JsonResponse(sear)
 
 def result(request):
-    return render(request, 'result.html')
+    search = Courses.objects.filter(title__icontains='pyth').values()
+    sear = dict()
+    for i in range(len(search)):
+        sear[str(i)] = search[i]
+    return render(request, 'result.html', context = sear)
 
 def card_detail(request, path):
     search = Courses.objects.filter(page_title__icontains=path).values()

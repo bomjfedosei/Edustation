@@ -11,9 +11,9 @@ function poisk(ser){
       string += '</div><h2>' + tor[key]['title'] + '</h2>';
       string += '<div class="cart_info"><ul>';
       string += '<li class="cart_teacher">'+ tor[key]['school'] + '</li>';
-      string += '<li class="cart_time">' + tor[key]['duration'] + 'месяцев</li>';
+      string += '<li class="cart_time">' + tor[key]['duration'] + ' месяцев</li>';
       string += '<li>' + tor[key]['type'] + '</li>';
-      string += '<li>' + tor[key]['price'] + 'руб</li>';
+      string += '<li>' + tor[key]['price'] + ' руб</li>';
       string += '</ul></div><p>' + tor[key]['description'] + '</p></div>'
       document.getElementsByClassName('main_content')[0].innerHTML += string;
     }
