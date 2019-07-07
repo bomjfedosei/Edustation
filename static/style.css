@@ -128,10 +128,10 @@ a:hover {
     background: #EBEEF3;
 }
 
-.cart img {
+/*.cart img {
     padding-top: 40px;
     margin-left: 10px;
-}
+}*/
 
 .cart h2 {
     position: absolute;
@@ -260,8 +260,7 @@ datail_statistics p {
 
 }
 
-
-.main_content{
-  margin-top: 100px;
-  margin-left: 25%;
+.imwrap{
+  width: 200px;
+  height: 200px;
 }

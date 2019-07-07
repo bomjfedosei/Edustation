@@ -28,6 +28,12 @@ function get_dialog(msg, data){
       }
     }
     count_message++;
+    if (count_message > 2){
+      document.getElementById('robot').src = '/static/Bot 2.svg'
+    }
+    else if (count_message > 4){
+      document.getElementById('robot').src = '/static/Bot 3.svg'
+    }
   };
 }
 get_dialog()
